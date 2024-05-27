@@ -588,9 +588,6 @@ footer section {
 /* #endregion RANDOM */
 
 @media (max-width: 834px){
-    body{
-        background-color: red;
-    }
     
     nav ul:first-of-type li:hover {
        background-color: transparent;
