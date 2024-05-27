@@ -111,20 +111,19 @@ nav ul li {
         justify-content: space-between;
     }
 
-    nav ul:first-of-type li:hover {
-        letter-spacing: 0;
-        background-color: transparent;
-    }
 
     .TopTop input {
         width: 18rem;
+        
     }
+    
 
     nav,
     nav ul {
         flex-direction: row;
         padding: 2rem 0 0 .4rem;
     }
+    
 
     nav ul:last-of-type li {
         position: relative;
@@ -142,6 +141,7 @@ nav ul li {
     .TopTop input {
         width: 13rem;
     }
+    
 }
 
 /* search media */
@@ -169,6 +169,7 @@ nav ul li {
         top: .2rem;
         right: .5rem;
     }
+    
 
 }
 
@@ -204,17 +205,24 @@ nav ul li {
         margin-bottom: .3rem;
         border-radius: 1rem;
     }
+    nav ul:first-of-type li:hover {
+        background-color: black;
+    }
 }
 
-nav ul:first-of-type li:hover a {
-    color: #999;
-}
+/* 
+    body{
+        background-color: red;
+    }
+    nav ul:first-of-type li:hover a {
+        color: #999;
+        background-color: transparent;
+    } */
 
-
-nav ul:first-of-type li:hover {
-    background-color: black;
-    padding-left: 1rem;
-}
+    nav ul:first-of-type li a:hover{
+        letter-spacing: 3px;
+        opacity: .8;
+    }
 
 
 /* #endregion TOP NAVIGATION */
@@ -578,3 +586,13 @@ footer section {
 
 
 /* #endregion RANDOM */
+
+@media (max-width: 834px){
+    body{
+        background-color: red;
+    }
+    
+    nav ul:first-of-type li:hover {
+       background-color: transparent;
+    }
+}
