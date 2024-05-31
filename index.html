@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +11,15 @@
 <body>
     <!-- #region HEADER -->
     <header>
-        <div class="TopTop">
-            <input type="search" name="" id="" placeholder="SØG">
-        </div>
-        <div class="header-logo">
-            <img src="Assets/images/logo_small_black.png" alt="">
-        </div>
         <!-- TOP NAVIGATION -->
-        <nav class="topNavigation">
+        <div>
+            <div id="searchBar">
+                <input type="search" name="søg" id="topSearch" placeholder="SØG">
+                <img src="assets/images/svg/search.svg" alt="">
+            </div>
+            <img id="krybImg" src="assets/images/svg/Kryb_logo.svg" alt="">
+        </div>
+        <nav>
             <ul>
                 <li><a href="#">forside</a></li>
                 <li><a href="#">shop</a></li>
@@ -28,19 +29,23 @@
                 <li><a href="#">kontakt</a></li>
             </ul>
             <ul>
-                <li><img src="Assets/images/SVG/bag.svg" alt="" srcset=""><a href="#">(0)</a></li>
+                <li>
+                    <a href="">
+                    <div class="bag">
+                        <img src="assets/images/svg/bag.svg" alt="">
+                        <p>(0)</p>
+                    </div>
+                    </a>
+                </li>
             </ul>
         </nav>
-
-    </header>
-    <div class="headerImage">
-        <img src="Assets/images/background.jpg" alt="">
-    </div>
+    </header>        
+        <a href=""></a><img id="headerImage" src="Assets/images/background.jpg" alt="">
     <!-- #endregion HEADER -->
     <!-- #region MAIN -->
     <main>
         <!-- PRODUKTER -->
-        <section class="produkter">
+        <section class="produkter" id="shop">
             <h1 class="globalH1">produkter</h1>
             <!-- product 1 -->
             <div class="gridContainerOne">
@@ -49,7 +54,7 @@
                     <h2 class="titel">dare squares</h2>
                     <p class="discription">med chili og fårekyllinger</p>
                     <p class="pris">49,95/stk</p>
-                    <a class="lægIKurv" href="#">læg i kurv</a>
+                    <a class="lægIKurv">læg i kurv</a>
                 </div>
                 <!-- product 2 -->
                 <div class="product">
@@ -57,7 +62,7 @@
                     <h2 class="titel">INSEKTBAR</h2>
                     <p class="discription">med dadler, nougat og insektmel</p>
                     <p class="pris">19,95/stk</p>
-                    <a class="lægIKurv" href="#">læg i kurv</a>
+                    <a class="lægIKurv">læg i kurv</a>
                 </div>
                 <!-- product 3 -->
                 <div class="product">
@@ -65,7 +70,7 @@
                     <h2 class="titel">DARE SQUARES</h2>
                     <p class="discription">med peanutbutter og Buffalo-orme</p>
                     <p class="pris">49,95/stk</p>
-                    <a class="lægIKurv" href="#">læg i kurv</a>
+                    <a class="lægIKurv">læg i kurv</a>
                 </div>
                 <!-- product 4 -->
                 <div class="product">
@@ -73,7 +78,7 @@
                     <h2 class="titel">INSEKTSNACK</h2>
                     <p class="discription">med chili</p>
                     <p class="pris">29,95/stk</p>
-                    <a class="lægIKurv" href="#">læg i kurv</a>
+                    <a class="lægIKurv">læg i kurv</a>
                 </div>
                 <!-- product 5 -->
                 <div class="product">
@@ -81,7 +86,7 @@
                     <h2 class="titel">insektknæk</h2>
                     <p class="discription">med Chiafrø og insektmel</p>
                     <p class="pris">29,95/stk</p>
-                    <a class="lægIKurv" href="#">læg i kurv</a>
+                    <a class="lægIKurv">læg i kurv</a>
                 </div>
                 <!-- product 6 -->
                 <div class="product">
@@ -89,13 +94,14 @@
                     <h2 class="titel">INSEKTSNACK</h2>
                     <p class="discription">med Sour Cream & Onion</p>
                     <p class="pris">39,95/stk</p>
-                    <a class="lægIKurv" href="#">læg i kurv</a>
+                    <a class="lægIKurv">læg i kurv</a>
                 </div>
             </div>
         </section>
+        <hr id="prOm">
         <!-- OM KRYB -->
         <section>
-            <h1 class="globalH1">om kryb</h1>
+            <h1 class="globalH1" id="om-kryb">om kryb</h1>
             <!-- CONTAINER -->
             <div class="containerOne">
                 <article class="left">
@@ -106,7 +112,7 @@
                     <p>Vores sortiment har lokalt fremstillede ingredienser i deres mest naturlige form for at skabe
                         inspirerede snacks, hvor alt er lavet 100% af os selv.</p>
                     <p>Vi er lidenskabelige med at tilbyde vores kunder velsmagende og nærende snacks lavet af sunde
-                        ingredienser, der har en positiv indvirkning pÃ¥ krop og sjæl.</p>
+                        ingredienser, der har en positiv indvirkning på krop og sjæl.</p>
                     <p>Hos <span>KRYB</span> er vores mål simpelt - at omdefinere hvad det betyder at spise godt.</p>
                     <p>Vi er forpligtede til at opretholde en bæredygtig og sund livsstil og aktivt bidrage til at sænke
                         vores CO2-fodaftryk og bevare vores planets vandforsyning gennem vores sortiment, opmærksomme
@@ -120,13 +126,12 @@
             </div>
         </section>
         <!-- OPSKRIFTER -->
-        <section class="opskrifter">
+        <section class="opskrifter" id="inspiration">
             <h1 id="opskrifter" class="globalH1">opskrifter</h1>
             <div class="gridContainerTwo">
                 <figure>
                     <img src="Assets/images/Instagram_01.jpg" alt="">
                     <figcaption><h2>Orme-Muffins</h2><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo magnam minima sit sunt ...</p></figcaption>
-
                 </figure>
                 <figure>
                     <img src="Assets/images/Instagram_02.jpg" alt="">
@@ -138,6 +143,7 @@
                 </figure>
             </div>
         </section>
+        <hr id="opKo">
         <!-- KONTAKT KRYB -->
         <h1 id="kontakt" class="globalH1">KONTAKT KRYB</h1>
         <div class="gridContainerThree">
@@ -168,59 +174,61 @@
         </div>
     </main>
     <!-- #endregion MAIN -->
+    <hr id="maFo">
     <!-- #region FOOTER -->
     <footer>
         <!-- SOCIALS -->
         <section>
             <div class="gridContainerFour">
-                <div><img src="Assets/images/linkedin_net.png" alt=""></div>
-                <div><img src="Assets/images/instagram.png" alt=""></div>
-                <div><img src="Assets/images/facebook.png" alt=""></div>
-                <div><img src="Assets/images/twitter.png" alt=""></div>
+                <div><a href=""><img src="Assets/images/linkedin_net.png" alt=""></a></div>
+                <div><a href=""><img src="Assets/images/instagram.png" alt=""></a></div>
+                <div><a href=""><img src="Assets/images/facebook.png" alt=""></a></div>
+                <div><a href=""><img src="Assets/images/twitter.png" alt=""></a></div>
             </div>
         </section>
         <!-- KRYB LOGO -->
         <div class="krybLogo">
-            <img src="Assets/images/logo_small_black.png" alt="">
+            <a href="#top"><img src="Assets/images/logo_small_black.png" alt=""></a>
         </div>
-        <div class="gridContainerFiveContainer">
+        <div>
             <div class="gridContainerFive">
                 <div>
-                    <h1>Om KRYB</h1>
+                    <header><h3>OM KRYB</h3></header>
                     <ul>
-                        <li>Historien</li>
-                        <li>Virksomheder og afdelinger</li>
-                        <li>Job</li>
-                        <li>CSR</li>
-                        <li>Danmark mod Madspild</li>
-                        <li>Foreign suppliers</li>
+                        <li><a href="">Historien</a></li>
+                        <li><a href="">Virksomheder og afdelinger</a></li>
+                        <li><a href="">Job</a></li>
+                        <li><a href="">CSR</a></li>
+                        <li><a href="">Danmark mod Madspild</a></li>
+                        <li><a href="">Foreign suppliers</a></li>
+                    </ul>                    
+                </div>
+                <div>
+                    <header><h3>INSPIRATION</h3></header>
+                    <ul>
+                        <li><a href="">Vin & Mad</a></li>
+                        <li><a href="">Opskrifter</a></li>
+                        <li><a href="">Sociale medier</a></li>
+                        <li><a href="">Gaver Privat</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h1>INSPIRATION</h1>
+                    <header><h3>OM HANDEL</h3></header>
                     <ul>
-                        <li>Vin & Mad</li>
-                        <li>Opskrifter</li>
-                        <li>Sociale medier</li>
-                        <li>Gaver Privat</li>
+                        <li><a href=""></a></li>
+                        <li><a href="">Handelsbetingelser</a></li>
+                        <li><a href="">Beskyttelse af personlige oplysninger</a></li>
+                        <li><a href="">Levering</a></li>
+                        <li><a href="">Få devarestyrelsens</a></li>
+                        <li><a href="">smiley-rapporter</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h1>OM HANDEL</h1>
+                    <header><h3>KONTAKT</h3></header>
                     <ul>
-                        <li>Handelsbetingelser</li>
-                        <li>Beskyttelse af personlige oplysninger</li>
-                        <li>Levering</li>
-                        <li>Få devarestyrelsens</li>
-                        <li>smiley-rapporter</li>
-                    </ul>
-                </div>
-                <div>
-                    <h1>KONTAKT</h1>
-                    <ul>
-                        <li>Telefon (+45) 12345678</li>
-                        <li>info@kryb.dk</li>
-                        <li>Butikker/Ã…bningstider</li>
+                        <li><a href="">Telefon (+45) 12345678</a></li>
+                        <li><a href="">info@kryb.dk</a></li>
+                        <li><a href="">Butikker/Åbningstider</a></li>
                     </ul>
                 </div>
             </div>

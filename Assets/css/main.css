@@ -1,9 +1,4 @@
-@import url(https://db.onlinewebfonts.com/c/c5bd605b45237a12c99133fa9d7cae49?family=Helvetica+W01+Roman);
-/* font-family: "Helvetica W01 Roman"; */
-
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-/* font-family: "Courier Prime", monospace;*/
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -11,10 +6,10 @@ html {
 
 body {
     background-color: white;
-    font-weight: 100;
     margin: 0;
     overflow-x: hidden;
-    font-family: "Helvetica W01 Roman";
+    font-family: "Nunito", sans-serif;
+    font-weight: 100;
 }
 
 /* GLOBAL H1 */
@@ -27,210 +22,262 @@ body {
 }
 
 /* #region HEADER */
+/* SECTION HEADER */
+.SectionHeader {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* #region HEADER */
+/* #region top of header */
 header {
     background-color: #ddd;
-    position: relative;
-    padding: .5rem 1rem 0 1rem;
+    padding: 1rem 0 2.3rem 0;
 }
 
-.TopTop {
+header div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div img {
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#searchBar {
     position: absolute;
-    top: 1.7rem;
-    left: 0;
+    top: 1.1rem;
 }
 
-.TopTop input {
-    border: none;
-    padding: .5rem 1rem;
-    width: 14rem;
+#searchBar input {
+    position: relative;
+    top: .12rem;
+    padding: 1rem 1rem 1rem 3rem;
     height: 3rem;
-    color: black;
+    border: none;
+    font-size: 1rem;
 }
 
-.TopTop input:focus {
+#searchBar img {
+    position: absolute;
+    top: .3rem;
+    transform: translateY(10%);
+    left: .6rem;
+    width: 2rem;
+}
+
+
+
+#searchBar input:focus {
     outline: none;
 }
 
-.TopTop input::placeholder {
+#searchBar input::placeholder {
     color: black;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
 }
 
-.header-logo {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+/* #endregion top of header */
+#krybImg{
+    padding: .7rem;
+    position: relative;
+    top: .3rem;
+    bottom: 1rem;
+    transition: 400ms ease;
+    outline: 2px solid transparent;
+    border-radius: .5rem;
+    
 }
-
-/* #region TOP NAVIGATION */
+#krybImg:hover{
+    outline: 2px solid black;
+}
+/* #region NAVIGATION */
 nav {
     display: flex;
-    padding: 1rem;
     flex-direction: column;
-    /* height: 2rem; */
-    width: 100%;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
     margin: 0;
-    flex-direction: column;
+    padding: 0;
+    list-style: none;
 
+    display: flex;
+    flex-direction: column;
 }
 
 nav ul:first-of-type li {
-    margin-right: 3rem;
+    margin-top: 5px;
+    padding: 0;
+    transform: translatey(46.5%);
+    position: relative;
+    top: .6rem;
 }
 
-nav ul li a {
-    font-size: 1.4rem;
+nav ul:first-of-type li a {
+    padding: .5rem 1.5rem;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     color: black;
     text-decoration: none;
-    text-transform: uppercase;
-    transition: 400ms ease;
+    transition: 400ms ease-in-out;
+    font-weight: 600;
 }
 
-nav ul li {
-    transition: 400ms ease;
-    padding: .3rem .2rem;
+nav ul:first-of-type li a:hover {
+    background-color: black;
+    color: white;
+    letter-spacing: 3px;
 }
 
+/* right */
+.bag {
+    padding: .5rem;
+    position: relative;
+    top: .665rem;
+    transform: translatey(20%);
+    transition: 400ms ease-in-out;
+}
 
+.bag img {
+    width: 3rem;
+    padding: 0;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
 
+}
 
+.bag p {
+    font-size: 1.7rem;
+    margin: 0;
+    color: black;
+}
 
+.bag:hover {
+    background-color: black;
+}
 
-.topNavigation ul:last-of-type li img {
-    width: 2.2rem;
+.bag:hover img {
+    filter: invert(1);
+    color: white;
+}
+
+.bag:hover p {
+    color: white;
+}
+
+nav ul:last-of-type li a {
+    text-decoration: none;
 }
 
 /* MEDIA QUERIES */
-
-@media (min-width: 834px) {
-    nav {
-        justify-content: space-between;
-    }
-
-
-    .TopTop input {
-        width: 18rem;
-        
-    }
-    
+@media (min-width: 900px) {
 
     nav,
     nav ul {
         flex-direction: row;
-        padding: 2rem 0 0 .4rem;
-    }
-    
-
-    nav ul:last-of-type li {
-        position: relative;
-        bottom: .4rem;
-        margin-right: 2rem;
     }
 
-    nav ul:last-of-type li a {
-        position: relative;
-        bottom: .5rem;
+    nav {
+        justify-content: space-between;
     }
-}
 
-@media (max-width: 1100px) {
-    .TopTop input {
-        width: 13rem;
-    }
-    
-}
-
-/* search media */
-@media (max-width: 834px) {
-    .TopTop {
+    .bag {
         position: absolute;
-        top: 1.5rem;
-        left: 50%;
-        padding: 1rem;
-        transform: translate(-50%, -50%);
-    }
-
-    .TopTop input {
-        width: 22rem;
-    }
-
-    .header-logo {
-        position: relative;
-        padding: 3.5rem 0 0;
-    }
-
-    nav ul:last-of-type {
-        /* background-color: red; */
-        position: absolute;
-        top: .2rem;
-        right: .5rem;
-    }
-    
-
-}
-
-/* mid nav media */
-@media (max-width: 1180px) {
-    nav ul li a {
-        font-size: 1rem;
+        top: 1rem;
+        right: 1rem;
+        border-radius: .5rem;
     }
 }
 
-@media (max-width: 978px) {
-    nav ul li {
-        font-size: .8rem;
-        padding: 0;
+@media (max-width: 1190px) {
+    header {
+        padding-bottom: 2rem;
+    }
+
+    nav ul:first-of-type li a {
+        font-size: 1.2rem;
+        padding: .5rem 1rem;
     }
 
     nav ul:first-of-type li {
-        margin-right: 1rem;
+        padding: 0;
+        margin: 0;
     }
 }
 
-@media (max-width: 834px) {
-    nav ul li a {
+@media (max-width: 900px) {
+    header {
+        padding-bottom: 2.2rem;
+    }
+
+    nav ul:first-of-type li {
+        margin-bottom: .8rem;
+    }
+    nav ul:first-of-type li a{
         font-size: 1.7rem;
-        margin: 1rem 0;
+
+    }
+    .bag {
+        border-radius: .5rem;
     }
 
-    nav ul {
-        padding: 0;
-    }
-
-    nav ul li {
-        margin-bottom: .3rem;
-        border-radius: 1rem;
-    }
     nav ul:first-of-type li:hover {
         background-color: black;
-    }
-}
-
-/* 
-    body{
-        background-color: red;
-    }
-    nav ul:first-of-type li:hover a {
-        color: #999;
-        background-color: transparent;
-    } */
-
-    nav ul:first-of-type li a:hover{
         letter-spacing: 3px;
-        opacity: .8;
     }
 
+    nav ul:first-of-type li:hover a {
+        background-color: transparent;
+        color: white;
+        letter-spacing: 1px;
+        padding: 0 0 0 auto;
+    }
 
-/* #endregion TOP NAVIGATION */
-.headerImage img {
-    width: 100%;
+    nav ul:first-of-type li {
+        padding: .5rem 0;
+        transition: 400ms ease-in-out;
+        margin: 0;
+        cursor: pointer;
+    }
 
+    .bag {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    #searchBar {
+        top: -50rem;
+    }
+
+    #searchBar img {
+        top: 51.5rem;
+        left: 2rem;
+        width: 3rem;
+        padding: .5rem 1.5rem;
+        border-radius: .5rem;
+        cursor: pointer;
+        transition: 400ms ease-in-out;
+    }
+
+    #searchBar img:hover {
+        background-color: rgb(255, 255, 255);
+        filter: invert(1);
+    }
 }
 
+/* #endregion NAVIGATION */
+#headerImage {
+    width: 100%;
+}
 /* #endregion HEADER */
 /* #region MAIN */
 /* #region OM PRODUKTER */
@@ -238,11 +285,33 @@ nav ul li {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
-    width: 100%;
+    width: 80%;
+    margin: 2rem auto 0 auto;
+}
+
+.product {
+    width: 18rem;
+    margin: 0 auto 0 auto;
+    padding: 4rem 6rem 2rem 6rem;
+    transition: 400ms ease;
+    outline: 2px solid transparent;
+    cursor: pointer;
+}
+
+.product:hover {
+    outline: 2px solid black;
+    border-radius: 1rem;
+    background-color: #fbfbfb;
+}
+
+.product:hover .lægIKurv {
+    border: 1px solid black;
 }
 
 .productImage {
-    width: 30%;
+    width: 12rem;
+    display: block;
+    margin: auto;
 }
 
 .titel {
@@ -270,6 +339,19 @@ nav ul li {
     font-size: 1.5rem;
     color: #333;
     text-decoration: none;
+    transition: 400ms ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+}
+
+.lægIKurv:hover {
+    background-color: black;
+    color: white;
+}
+
+.lægIKurv:active {
+    opacity: .8;
 }
 
 .product {
@@ -283,13 +365,13 @@ nav ul li {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 1500px;
-    width: 100%;
+    width: 70%;
     margin: 0 auto;
 }
 
 /* LEFT */
 .left {
-    padding: 2rem;
+    padding: 2rem 0 2rem 2rem;
     font-size: 1.3rem;
 }
 
@@ -312,10 +394,14 @@ nav ul li {
 
 /* RIGHT */
 .right {
-    padding: 2rem;
+    padding: 2rem 2rem 2rem .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.right img {
+    width: 100%;
 }
 
 @media (max-width: 1100px) {
@@ -323,11 +409,7 @@ nav ul li {
         grid-template-columns: 1fr;
     }
 
-    .right img {
-        width: 100%;
-    }
 }
-
 /* #endregion OM KRYB */
 /* #region OPSKRIFTER */
 .opskrifter {
@@ -389,20 +471,23 @@ nav ul li {
 
 
 @media (max-width: 1150px) {
-    .gridContainerTwo figcaption{
+    .gridContainerTwo figcaption {
         position: relative;
         bottom: 5.6px;
         background-color: #eee;
         border-radius: 0 0 1rem 1rem;
 
     }
-    .gridContainerTwo figcaption h2, .gridContainerTwo figcaption p{
+
+    .gridContainerTwo figcaption h2,
+    .gridContainerTwo figcaption p {
         color: black;
         font-size: 1rem;
     }
 }
+
 @media (max-width: 970px) {
-    .gridContainerTwo{
+    .gridContainerTwo {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -427,7 +512,7 @@ nav ul li {
 }
 
 .kundeservice p span {
-    font-weight: 800;
+    font-weight: 1000;
 }
 
 #myForm {
@@ -494,15 +579,39 @@ nav ul li {
 
 }
 
+#kontakt {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
 
+#opKo {
+    border: solid #ddd .1rem;
+    width: 1500px;
+    border-radius: 1000px;
+    margin: 0 auto 5rem auto;
+}
+
+#maFo {
+    border: solid #ddd .1rem;
+    width: 1500px;
+    border-radius: 1000px;
+    margin: 7rem auto 7rem auto;
+}
+
+#prOm {
+    border: solid #ddd .1rem;
+    width: 1500px;
+    border-radius: 1000px;
+    margin: 7rem auto 7rem auto;
+}
 
 /* #endregion KONTAKT KRYB */
 /* #endregion MAIN */
 /* #region FOOTER */
 
 footer {
-    margin: 10rem 0 0 0;
-    padding: 5rem 3rem;
+    margin: 0;
+    padding: 4rem 2rem 3rem 5rem;
     background-color: #ddd;
 }
 
@@ -520,11 +629,42 @@ footer section {
 
 .gridContainerFour img {
     width: 100%;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: .7rem;
+    transition: 400ms ease;
+}
+
+.gridContainerFour img:hover {
+    border: 2px solid black;
+    opacity: .8;
+}
+
+.gridContainerFour img:active {
+    opacity: .5;
+    background-color: #dddddddd;
 }
 
 .krybLogo {
     text-align: center;
-    margin: 4rem 1rem;
+    padding: 1rem;
+    border-radius: .7rem;
+    border: 2px solid transparent;
+    transition: 400ms ease;
+    width: fit-content;
+    margin: 2rem auto .4rem auto;
+
+}
+
+.krybLogo:hover {
+    border: 2px solid black;
+    opacity: .8;
+
+}
+
+.krybLogo:active {
+    opacity: .5;
+    background-color: #dddddddd;
 }
 
 .gridContainerFive {
@@ -532,36 +672,50 @@ footer section {
     grid-template-columns: repeat(4, 1fr);
     width: 80%;
     margin: auto;
-    text-align: center;
 }
+
 @media (max-width: 950px) {
     .gridContainerFive {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 .gridContainerFive div {
     width: 15rem;
-    margin: auto;
 }
 
-.gridContainerFive div h1 {
-    font-size: 1.8rem;
+.gridContainerFive header h3 {
+    font-size: 1.6rem;
     font-weight: 700;
-    margin: 0;
-    text-align: left;
+    position: relative;
+    top: 2rem;
 }
 
 .gridContainerFive div ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 1rem;
 }
 
 .gridContainerFive div ul li {
     margin: .5rem 0;
-    text-align: left;
+}
+
+.gridContainerFive div ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 400ms ease;
+}
+
+.gridContainerFive div ul li a:hover {
+    text-decoration: underline;
+    opacity: .8;
+}
+
+.gridContainerFive div ul li a:focus {
+    text-decoration: underline;
+    opacity: .5;
 }
 
 /* #endregion FOOTER */
@@ -586,10 +740,3 @@ footer section {
 
 
 /* #endregion RANDOM */
-
-@media (max-width: 834px){
-    
-    nav ul:first-of-type li:hover {
-       background-color: transparent;
-    }
-}
